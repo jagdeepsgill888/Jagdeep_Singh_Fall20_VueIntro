@@ -1,0 +1,12 @@
+.remove-prof {
+  padding: 10px;
+  color: white;
+  background-color: #333;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: blue;
+  }
+}
