@@ -8,6 +8,8 @@
         data: {
             message: "Hello from Vue!",
             aontherMessage: "This is some sample text",
+            removeAformat: true,
+            showBioData: false,
 
             professors: [
                 { name: "Justin", role: "coordinator", nickname: "nitsuj"},
@@ -37,7 +39,7 @@
 
             removeItem(target) {
                 //remove this item/prof from the professors array
-                console.log('clicked to remove prof', target);
+                console.log('clicked to remove prof', target, target.name);
             }
         }
     }).$mount("#app"); // also connects Vue to your wrapper in HTML

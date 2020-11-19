@@ -8,4 +8,9 @@
 }
 .remove-prof:hover {
   background-color: blue;
-} /*# sourceMappingURL=main.css.map */
+}
+
+.prof-button-modifier {
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */
