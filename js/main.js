@@ -10,6 +10,7 @@
             aontherMessage: "This is some sample text",
             removeAformat: true,
             showBioData: false,
+            currentProfData: {},
 
             professors: [
                 { name: "Justin", role: "coordinator", nickname: "nitsuj"},
@@ -49,6 +50,7 @@
                 //the "this" keyword inside a vus instance refers tot he vue intance itself by default
                 //toggle the property between true and false using a ternary statement
                 this.showBioData = this.showBioData ? false : true
+                this.currentProfData = target;
             }
         }
     }).$mount("#app"); // also connects Vue to your wrapper in HTML
