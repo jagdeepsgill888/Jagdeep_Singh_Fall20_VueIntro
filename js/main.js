@@ -28,6 +28,11 @@
             //   alert("you added Jarrod!")
           },
 
+          //run a method when we change our view ( update the DOM with Vue)
+          updated : function() {
+              console.log('Vue just updated the DOM');
+          },
+
         methods: {
             logClicked() {
                 console.log("clicked on a prof name")
@@ -40,6 +45,10 @@
             removeItem(target) {
                 //remove this item/prof from the professors array
                 console.log('clicked to remove prof', target, target.name);
+
+                //the "this" keyword inside a vus instance refers tot he vue intance itself by default
+                //toggle the property between true and false using a ternary statement
+                this.showBioData = this.showBioData ? false : true
             }
         }
     }).$mount("#app"); // also connects Vue to your wrapper in HTML
