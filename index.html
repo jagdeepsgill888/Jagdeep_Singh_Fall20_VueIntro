@@ -11,10 +11,11 @@
     <main id="app">
      <h1 @click="clickHeader">{{ message }}</h1>
      <p>{{ aontherMessage }}</p>
+     <span></span>
 
      <!-- show the prof data in collection -->
      <ul>
-         <li v-for="item in collection">
+         <li v-for="item in professors">
              <p V-on:Click="logClicked">Prof Name: {{ item.name }}, Role: {{ item.role }}</p>
          </li>
      </ul>

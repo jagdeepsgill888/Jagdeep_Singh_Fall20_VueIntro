@@ -1,15 +1,15 @@
 
-
-const myVM = ( () => {
+(() => {
+// const myVM = ( () => {
     let vue_vm = new Vue({
         // link Vue to an element in our HTML
-        el: "#app",
+        // el: "#app",
 
         data: {
             message: "Hello from Vue!",
             aontherMessage: "This is some sample text",
 
-            collection: [
+            professors: [
                 { name: "Justin", role: "coordinator", nickname: "nitsuj"},
                 { name: "John", role: "prof", nickname: "super chill"},
                 { name: "Joe", role: "prof", nickname: "tedy bear"}
