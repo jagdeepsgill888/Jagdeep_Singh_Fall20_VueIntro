@@ -50,7 +50,7 @@ import { fetchData } from "./components/DataMiner.js";
                 console.log("clicked on header")
             },
 
-            removeItem(target) {
+            showItemData(target) {
                 //remove this item/prof from the professors array
                 console.log('clicked to view prof bio data', target, target.name);
 
@@ -61,7 +61,17 @@ import { fetchData } from "./components/DataMiner.js";
 
                 // make the selected prof's data visable
                 this.currentProfData = target;
+            },
+
+            removeItem(target) {
+                //remove this item/prof from the professors array
+                console.log('clicked to remove prof', target, target.name);
+
+                // make the selected prof's data visable
+                this.professors.splice(this.professors.indexOf(target), 1);
             }
+
+
         }
     }).$mount("#app"); // also connects Vue to your wrapper in HTML
   })();
