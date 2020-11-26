@@ -1,3 +1,5 @@
+import { fetchData } from "./components/DataMiner.js";
+
 
 (() => {
 // const myVM = ( () => {
@@ -10,23 +12,27 @@
             aontherMessage: "This is some sample text",
             removeAformat: true,
             showBioData: false,
-            currentProfData: {},
+            professors: []
 
-            professors: [
-                { name: "Justin", role: "coordinator", nickname: "nitsuj"},
-                { name: "John", role: "prof", nickname: "super chill"},
-                { name: "Joe", role: "prof", nickname: "tedy bear"}
-            ]
+            // professors: [
+            //     { name: "Justin", role: "coordinator", nickname: "nitsuj"},
+            //     { name: "John", role: "prof", nickname: "super chill"},
+            //     { name: "Joe", role: "prof", nickname: "tedy bear"}
+            // ]
         },
 
         // this is the "mounted" lifecycle hook. Vue is done creating itself, and has attached itself to the "app" div on the page
         
           mounted: function() {
-              console.log("Vue is mounted!");
-            //   alert("Hey there! you vue instance is ready");
+              console.log("Vue is mounted, trying to fetch for the initial data");
 
-              this.professors.push({name: "Jarrod", role: "supermodel prof", nickname: "Zoolander"})
-            //   alert("you added Jarrod!")
+              fetchData("./includes/index.php")
+              .then(data => {
+                  data.forEach(item => this.professors.push(item));
+                 this.professors = data
+                })
+              .catch(err => console.error(err));
+
           },
 
           //run a method when we change our view ( update the DOM with Vue)
@@ -47,10 +53,11 @@
                 //remove this item/prof from the professors array
                 console.log('clicked to remove prof', target, target.name);
 
-                //the "this" keyword inside a vus instance refers tot he vue intance itself by default
-                //toggle the property between true and false using a ternary statement
-                this.showBioData = this.showBioData ? false : true
-                this.currentProfData = target;
+                // the "this" keyword inside a vus instance refers tot he vue intance itself by default
+                // toggle the property between true and false using a ternary statement
+
+                // this.showBioData = this.showBioData ? false : true
+                // this.currentProfData = target;
             }
         }
     }).$mount("#app"); // also connects Vue to your wrapper in HTML
