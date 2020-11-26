@@ -68,7 +68,8 @@ import { fetchData } from "./components/DataMiner.js";
                 console.log('clicked to remove prof', target, target.name);
 
                 // make the selected prof's data visable
-                this.professors.splice(this.professors.indexOf(target), 1);
+                // this.professors.splice(this.professors.indexOf(target), 1);
+                this.$delete(this.professors, target);
             }
 
 
