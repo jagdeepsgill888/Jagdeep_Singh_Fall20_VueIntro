@@ -18,14 +18,14 @@
      <ul>
          <li v-for="item in professors">
              <p>Prof Name: {{ item.name }}, Role: {{ item.role }}</p>
-             <a href="" class="remove-prof" @click.prevent="removeItem(item)" v-bind:class="{'prof-button-modifier' : removeAformat}">Remove {{ item.name }}</a>
+             <a href="" class="remove-prof" @click.prevent="removeItem(item)" v-bind:class="{'prof-button-modifier' : removeAformat}">show {{ item.name }}'s info</a>
          </li>
      </ul>
 
      <section class="bio-data" :class="{'show-bio': showBioData}">
-        <!-- <h1>{{ currentProfData.name }}</h1>
-        <p> {{ currentProfData.nickname }}</p> -->
-         <!-- <p>dfsd sdfsdfsd egdfdf fdfsdfsdfsd sdfsdfsdf sdsdgsdgdsg sdgsdgsdg</p> -->
+        <h1>{{ currentProfData.name }}</h1>
+        <p> {{ currentProfData.nickname }}</p> 
+         <p>dfsd sdfsdfsd egdfdf fdfsdfsdfsd sdfsdfsdf sdsdgsdgdsg sdgsdgsdg</p> 
      </section>
     </main>   
 </body>

@@ -12,7 +12,8 @@ import { fetchData } from "./components/DataMiner.js";
             aontherMessage: "This is some sample text",
             removeAformat: true,
             showBioData: false,
-            professors: []
+            professors: [],
+            currentProfData: {}
 
             // professors: [
             //     { name: "Justin", role: "coordinator", nickname: "nitsuj"},
@@ -51,13 +52,15 @@ import { fetchData } from "./components/DataMiner.js";
 
             removeItem(target) {
                 //remove this item/prof from the professors array
-                console.log('clicked to remove prof', target, target.name);
+                console.log('clicked to view prof bio data', target, target.name);
 
                 // the "this" keyword inside a vus instance refers tot he vue intance itself by default
                 // toggle the property between true and false using a ternary statement
 
-                // this.showBioData = this.showBioData ? false : true
-                // this.currentProfData = target;
+                this.showBioData = this.showBioData ? false : true
+
+                // make the selected prof's data visable
+                this.currentProfData = target;
             }
         }
     }).$mount("#app"); // also connects Vue to your wrapper in HTML
