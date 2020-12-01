@@ -17,18 +17,23 @@
 
      <!-- this is a custom Vue component defined in main.js -->
      <prof-card></prof-card>
+     
 
      <!-- show the prof data in collection -->
-     <!-- <ul>
-         <li v-for="item, index in professors">
+     <ul>
+         
+         <!-- this is a custom Vue component defined in main.js -->
+          <prof-card v-for="item in professors"></prof-card>
+
+         <!-- <li v-for="item, index in professors">
              <p>Prof Name: {{ item.name }}, Role: {{ item.role }}</p>
 
              <a href="" class="remove-prof" @click.prevent="showItemData(item)" v-bind:class="{'prof-button-modifier' : removeAformat}">show {{ item.name }}'s info</a>
 
              <a href="" class="remove-prof" @click.prevent="removeItem(index)" v-bind:class="{'prof-button-modifier' : removeAformat}">Remove {{ item.name }}'s info</a>
 
-         </li>
-     </ul> -->
+         </li> -->
+     </ul>
 
      <section class="bio-data" :class="{'show-bio': showBioData}">
         <h1>{{ currentProfData.name }}</h1>
