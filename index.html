@@ -14,8 +14,12 @@
      <p>{{ aontherMessage }}</p>
      <span></span>
 
+
+     <!-- this is a custom Vue component defined in main.js -->
+     <prof-card></prof-card>
+
      <!-- show the prof data in collection -->
-     <ul>
+     <!-- <ul>
          <li v-for="item, index in professors">
              <p>Prof Name: {{ item.name }}, Role: {{ item.role }}</p>
 
@@ -24,7 +28,7 @@
              <a href="" class="remove-prof" @click.prevent="removeItem(index)" v-bind:class="{'prof-button-modifier' : removeAformat}">Remove {{ item.name }}'s info</a>
 
          </li>
-     </ul>
+     </ul> -->
 
      <section class="bio-data" :class="{'show-bio': showBioData}">
         <h1>{{ currentProfData.name }}</h1>

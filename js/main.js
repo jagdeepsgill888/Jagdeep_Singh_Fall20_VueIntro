@@ -4,8 +4,15 @@ import { fetchData } from "./components/DataMiner.js";
 (() => {
 
 Vue.component("prof-card", {
-    template:`<section class="prof-card"></section>`
-})
+    template:`<section class="prof-card">
+    <h2 class="prof-header">Coordinator - Justin Brunner</h2>
+    <p>Lorem ipsum whateverum labm lum dewm</p>
+    </section>`,
+
+    created: function() {
+        console.log('Created a prof');
+    }
+});
 
 
 // const myVM = ( () => {
