@@ -16,14 +16,14 @@
 
 
      <!-- this is a custom Vue component defined in main.js -->
-     <prof-card></prof-card>
+     <!-- <prof-card></prof-card> -->
      
 
      <!-- show the prof data in collection -->
      <ul>
          
          <!-- this is a custom Vue component defined in main.js -->
-          <prof-card v-for="item in professors"></prof-card>
+          <prof-card v-for="item in professors" :item="item" :key="item.id"></prof-card>
 
          <!-- <li v-for="item, index in professors">
              <p>Prof Name: {{ item.name }}, Role: {{ item.role }}</p>

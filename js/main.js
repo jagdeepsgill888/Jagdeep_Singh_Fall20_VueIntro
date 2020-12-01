@@ -4,12 +4,13 @@ import { fetchData } from "./components/DataMiner.js";
 (() => {
 
 Vue.component("prof-card", {
-    template:`<li>
-        <p>Prof Name: Temp</p>
+    props: ["item"],
+    template: `<li>
+        <p>Prof Name: {{ item.name }}</p>
 
-        <a href="" class="remove-prof"> Show Prof's info</a>
+        <a href="" class="remove-prof"> Show {{ item.name }}'s info</a>
 
-         <a href="" class="remove-prof">Remove Prof</a>
+         <a href="" class="remove-prof">Remove {{ item.name }}</a>
 
       </li>`,
 
