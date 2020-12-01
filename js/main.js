@@ -2,6 +2,12 @@ import { fetchData } from "./components/DataMiner.js";
 
 
 (() => {
+
+Vue.component("prof-card", {
+    template:`<section class="prof-card"></section>`
+})
+
+
 // const myVM = ( () => {
     let vue_vm = new Vue({
         // link Vue to an element in our HTML
