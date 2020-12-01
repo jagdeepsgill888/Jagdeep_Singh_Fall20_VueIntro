@@ -6,6 +6,7 @@ import { fetchData } from "./components/DataMiner.js";
 Vue.component("prof-card", {
     props: ["item"],
     template: `<li>
+        <img :src="'images/' + item.avatar" alt="prof image">
         <p>Prof Name: {{ item.name }}</p>
 
         <a href="" class="remove-prof"> Show {{ item.name }}'s info</a>
@@ -15,7 +16,7 @@ Vue.component("prof-card", {
       </li>`,
 
     created: function() {
-        console.log('Created a prof');
+        console.log(`Created ${this.item.name}'s card`);
     }
 });
 
