@@ -6,7 +6,7 @@ import { fetchData } from "./components/DataMiner.js";
 Vue.component("prof-card", {
     props: ["item"],
     template: `<li>
-        <img :src="'images/' + item.avatar" alt="prof image">
+        <img :src="'images/' + item.avatar" :alt='item.name + " image"'>
         <p>Prof Name: {{ item.name }}</p>
 
         <a href="" class="remove-prof"> Show {{ item.name }}'s info</a>
